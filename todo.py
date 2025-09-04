@@ -7,3 +7,8 @@ init(autoreset=True)
 
 # 📂 Ruta del archivo JSON que almacena las tareas
 todo = Path("tasks.json")
+
+with open(todo, 'r', encoding='utf-8') as archivo:
+    tareas = json.load(archivo)
+
+print(tareas)
